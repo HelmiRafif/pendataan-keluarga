@@ -103,7 +103,6 @@ Route::post('kb/store', function (Request $request) {
     $input['II_5_a'] = date('m-Y', strtotime($input['II_5_a']));
     $input['II_5_b'] = date('m-Y', strtotime($input['II_5_b']));
     $input = Kb::create($input);
-    dd($input);
     return redirect()->route('pembangunan-keluarga');
 })->middleware(['auth'])->name('kb.store');
 
