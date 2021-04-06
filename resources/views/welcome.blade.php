@@ -5,14 +5,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Tailwind Starter Template - App Landing Page Template: Tailwind Toolbox</title>
+	<title>Welcome - Pendataan Keluarga 2021</title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	
     <!-- Font Awesome if you need it
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 	-->
-
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 	<link href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css" rel="stylesheet">
 	{{-- <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css"> --}}
 	<link rel="stylesheet" href="{{ mix('css/app.css') }}">
@@ -63,7 +63,7 @@
 		<div class="flex flex-col w-auto md:w-3/5  justify-center text-center md:text-left overflow-y-hidden">
 		<h1 class="my-4 text-4xl md:text-8xl text-purple-800 font-bold leading-tight slide-in-bottom-h1">Selamat Datang</h1>
 		<p class="leading-normal text-lg md:text-2xl mb-8 slide-in-bottom-subtitle">Pendataan, awal perencanaan keluarga.</p>
-		<a class="my-3 mx-auto underline  rounded-full text-2xl p-2" href="/kependudukan">Isi Formulir <i class="fas fa-angle-right"></i></a>
+		<a class="my-3 mx-auto underline  rounded-full text-2xl p-2 hover:text-gray-400" href="/kependudukan">Isi Formulir <i class="fas fa-angle-right"></i></a>
     </div>
   
   <!--Right Col-->

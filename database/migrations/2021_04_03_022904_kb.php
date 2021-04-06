@@ -14,7 +14,7 @@ class Kb extends Migration
     public function up()
     {
         Schema::create('kb', function (Blueprint $table) {
-            $table->string('No HP');
+            $table->string('No_HP');
             $table->string('Alamat');
             $table->string('rt')->nullable();
             $table->string('id_keluarga');

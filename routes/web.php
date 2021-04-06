@@ -111,6 +111,7 @@ Route::post('pembangunan/store', function (Request $request) {
 
     // dd($input);
      $input['III_32']= implode(", ",$input['III_32']);
+     $input['III_30']= implode(", ",$input['III_30']);
 
     $input['id_keluarga'] = Auth::User()->name;
     $input = Pembangunan::create($input);

@@ -206,7 +206,7 @@
 				<x-dropdown-link :href="route('dashboard')"
 				onclick="event.preventDefault();
 									this.closest('form').submit();">
-					{{ __('Dasbor') }} <i class="fas fa-download"></i>
+					{{ __('Dasbor') }} 
 				</x-dropdown-link>
 			</form>
 			@endif

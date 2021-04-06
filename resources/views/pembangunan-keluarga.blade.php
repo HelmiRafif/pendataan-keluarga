@@ -936,19 +936,19 @@
                 </div>
                 <div class="md:w-2/3">
                     <label class="inline-flex items-center">
-                        <input type="checkbox" name="III_30" value="Koran / Majalah / Tabloid<" class="form-checkbox text-indigo-600">
+                        <input type="checkbox" name="III_30[]" value="Koran / Majalah / Tabloid<" class="form-checkbox text-indigo-600">
                         <span class="ml-2">Koran / Majalah / Tabloid</span>
                     </label><br>
                     <label class="inline-flex items-center pb-3">
-                        <input type="checkbox" name="III_30" value="Televisi / Radio / Videotron" class="form-checkbox text-indigo-600">
+                        <input type="checkbox" name="III_30[]" value="Televisi / Radio / Videotron" class="form-checkbox text-indigo-600">
                         <span class="ml-2">Televisi / Radio / Videotron</span>
                     </label><br>
                     <label class="inline-flex items-center pb-3">
-                        <input type="checkbox" name="III_30" value="Facebook / Instagram / Twitter / Whatsapp / Youtube / Website" class="form-checkbox text-indigo-600">
+                        <input type="checkbox" name="III_30[]" value="Facebook / Instagram / Twitter / Whatsapp / Youtube / Website" class="form-checkbox text-indigo-600">
                         <span class="ml-2">Facebook / Instagram / Twitter / Whatsapp / Youtube / Website</span>
                     </label><br>
                     <label class="inline-flex items-center">
-                        <input type="checkbox" name="III_30"  value="Seminar / Pengajian / Ibadat / Workshop / Pertemuan Kelompok Kegiatan" class="form-checkbox text-indigo-600">
+                        <input type="checkbox" name="III_30[]"  value="Seminar / Pengajian / Ibadat / Workshop / Pertemuan Kelompok Kegiatan" class="form-checkbox text-indigo-600">
                         <span class="ml-2">Seminar / Pengajian / Ibadat / Workshop / Pertemuan Kelompok Kegiatan</span>
                     </label>
                 </div>
