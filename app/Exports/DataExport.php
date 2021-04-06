@@ -42,7 +42,6 @@ class DataExport implements FromArray, WithHeadings, ShouldAutoSize
             'Pendidikan',
             'Kepesertaan JKN / Askes',
             'Keberadaan (1 tahun terakhir)',
-
             'Berapa kali melahirkan',
             'Anak Lahir Hidup Laki-laki',
             'Anak Lahir Hidup Perempuan',
@@ -64,7 +63,6 @@ class DataExport implements FromArray, WithHeadings, ShouldAutoSize
             'mendapat informasi tentang Jenis-jenis alat/obat/cara KB',
             'mendapat informasi tentang Efek samping alat/obat/cara KB',
             'mendapat informasi tentang Yang harus dilakukan apabila mengalami efek samping',
-
             'III_1',
             'III_2',
             'III_3',

@@ -110,8 +110,8 @@ Route::post('pembangunan/store', function (Request $request) {
     $input = $request->all();
 
     // dd($input);
-     $input['III_32']= implode(", ",$input['III_32']);
-     $input['III_30']= implode(", ",$input['III_30']);
+    $input['III_32']= implode(", ",$input['III_32']);
+    $input['III_30']= implode(", ",$input['III_30']);
 
     $input['id_keluarga'] = Auth::User()->name;
     $input = Pembangunan::create($input);
@@ -149,7 +149,6 @@ Route::get('download', function(){
             'Pendidikan' => $value->I_14 ,
             'Kepesertaan JKN / Askes' => $value->I_15 ,
             'Keberadaan (1 tahun terakhir)' => $value->I_16 ,
-
             'Berapa kali melahirkan'=> $value->II_1 ,
             'Anak Lahir Hidup Laki-laki'=> $value->II_1_a_1 ,
             'Anak Lahir Hidup Perempuan'=> $value->II_1_a_2 ,
@@ -171,7 +170,6 @@ Route::get('download', function(){
             'mendapat informasi tentang Jenis-jenis alat/obat/cara KB'=> $value->II_9_a ,
             'mendapat informasi tentang Efek samping alat/obat/cara KB'=> $value->II_9_b ,
             'mendapat informasi tentang Yang harus dilakukan apabila mengalami efek samping'=> $value->II_9_c ,
-
             'III_1' => $value->III_1,
             'III_2' => $value->III_2,
             'III_3' => $value->III_3,
