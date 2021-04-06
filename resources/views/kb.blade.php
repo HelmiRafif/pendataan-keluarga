@@ -128,7 +128,7 @@
                         </div>
                         <div class="w-full">
                             <div class="mb-2 px-4">
-                                <input class="form-input block w-full focus:bg-white" name="alamat" type="text" value="{{$name}}" disabled>
+                                <input class="form-input block w-full focus:bg-white" name="alamat" type="text" value="{{$name}}" readonly>
                             </div>
                         </div>
                         <div class="w-full">

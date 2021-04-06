@@ -25,17 +25,33 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     $data = Kependudukan::get();
-    return view('dashboard', compact('data'))->with('i');
+    $id = Auth::user()->id;
+    // dd($id);
+    if ($id == 1 ) {
+        return view('dashboard', compact('data'))->with('i');
+    } else {
+        return redirect()->route('kependudukan');
+    }
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/dashboard-kb', function () {
     $data = Kb::get();
-    return view('dashboard-kb',compact('data'));
+    $id = Auth::user()->id;
+    if ($id == 1 ) {
+        return view('dashboard-kb', compact('data'))->with('i');
+    } else {
+        return redirect()->route('kependudukan');
+    }
 })->middleware(['auth'])->name('dashboard-kb');
 
 Route::get('/dashboard-pembangunan', function () {
     $data = Pembangunan::get();
-    return view('dashboard-pembangunan', compact('data'));
+    $id = Auth::user()->id;
+    if ($id == 1 ) {
+        return view('dashboard-pembangunan', compact('data'))->with('i');
+    } else {
+        return redirect()->route('kependudukan');
+    }
 })->middleware(['auth'])->name('dashboard-pembangunan');
 
 Route::get('/kependudukan', function(Request $request) {
@@ -77,28 +93,39 @@ Route::post('kependudukan/store', function (Request $request) {
 })->middleware(['auth'])->name('kependudukan.store');
 
 Route::post('kb/store', function (Request $request) {
+    $input['II_8'] = "";
     $input = $request->all();
-    if ($input['II_8'] == null) {
+    if ( !isset($input['II_8'])) {
         $input['II_8'] = $input['II_8b'];
     }
     $input['id_keluarga'] = Auth::User()->name;
+    $input['II_4_a'] = date('m-Y', strtotime($input['II_4_a']));
+    $input['II_5_a'] = date('m-Y', strtotime($input['II_5_a']));
+    $input['II_5_b'] = date('m-Y', strtotime($input['II_5_b']));
     $input = Kb::create($input);
     return redirect()->route('pembangunan-keluarga');
 })->middleware(['auth'])->name('kb.store');
 
 Route::post('pembangunan/store', function (Request $request) {
     $input = $request->all();
+
+    // dd($input);
+     $input['III_32']= implode(", ",$input['III_32']);
+
     $input['id_keluarga'] = Auth::User()->name;
     $input = Pembangunan::create($input);
     return view('selesai');
 })->middleware(['auth'])->name('pembangunan.store');
 
 Route::get('download', function(){
-    $kependudukan = Kependudukan::join('kb','kb.id_keluarga','=','kependudukan.id_keluarga')
-    ->join('pembangunan','kb.id_keluarga','=','pembangunan.id_keluarga')
+    $kependudukan = Kependudukan::leftJoin('kb','kb.id_keluarga','=','kependudukan.id_keluarga')
+    ->leftJoin('pembangunan','kb.id_keluarga','=','pembangunan.id_keluarga')
+    ->orderBy('kependudukan.id_keluarga','asc')
     -> get();
 
     $a = [];
+
+    // dd($kependudukan);
     
     foreach($kependudukan as $value) {
         

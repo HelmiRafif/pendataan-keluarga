@@ -989,44 +989,47 @@
                 </div>
                 <div class="md:w-2/3">
                     <label class="inline-flex items-center">
-                        <input type="checkbox" name="III_32" value="Pejabat Pemerintah" class="form-checkbox text-indigo-600">
+                        <input type="checkbox" name="III_32[]" value="Pejabat Pemerintah" class="form-checkbox text-indigo-600">
                         <span class="ml-2">Pejabat Pemerintah</span> 
                     </label><br>
                     <label class="inline-flex items-center pb-3">
-                        <input type="checkbox" name="III_32" value="Petugas Keluarga Berencana (PKB/PLKB/Petugas lapangan KB lainnya)" class="form-checkbox text-indigo-600">
+                        <input type="checkbox" name="III_32[]" value="Petugas Keluarga Berencana (PKB/PLKB/Petugas lapangan KB lainnya)" class="form-checkbox text-indigo-600">
                         <span class="ml-2">Petugas Keluarga Berencana (PKB/PLKB/Petugas lapangan KB lainnya)</span>
                     </label><br>
                     <label class="inline-flex items-center pb-3">
-                        <input type="checkbox" name="III_32" value="Guru / Dosen" class="form-checkbox text-indigo-600">
+                        <input type="checkbox" name="III_32[]" value="Guru / Dosen" class="form-checkbox text-indigo-600">
                         <span class="ml-2">Guru / Dosen</span>
                     </label><br>
                     <label class="inline-flex items-center">
-                        <input type="checkbox" name="III_32" value="Tokoh Agama" class="form-checkbox text-indigo-600">
+                        <input type="checkbox" name="III_32[]" value="Tokoh Agama" class="form-checkbox text-indigo-600">
                         <span class="ml-2">Tokoh Agama</span>
                     </label><br>
                     <label class="inline-flex items-center">
-                        <input type="checkbox" name="III_32" value="Tokoh Masyarakat" class="form-checkbox text-indigo-600">
+                        <input type="checkbox" name="III_32[]" value="Tokoh Masyarakat" class="form-checkbox text-indigo-600">
                         <span class="ml-2">Tokoh Masyarakat</span>
                     </label><br>
                     <label class="inline-flex items-center">
-                        <input type="checkbox" name="III_32" value="Dokter" class="form-checkbox text-indigo-600">
+                        <input type="checkbox" name="III_32[]" value="Dokter" class="form-checkbox text-indigo-600">
                         <span class="ml-2">Dokter</span>
                     </label><br>
                     <label class="inline-flex items-center">
-                        <input type="checkbox" name="III_32" value="Bidan / Perawat" class="form-checkbox text-indigo-600">
+                        <input type="checkbox" name="III_32[]" value="Bidan / Perawat" class="form-checkbox text-indigo-600">
                         <span class="ml-2">Bidan / Perawat</span>
                     </label><br>
                     <label class="inline-flex items-center">
-                        <input type="checkbox" name="III_32" value="Perangkat Desa / Kelurahan" class="form-checkbox text-indigo-600">
+                        <input type="checkbox" name="III_32[]" value="Perangkat Desa / Kelurahan" class="form-checkbox text-indigo-600">
                         <span class="ml-2">Perangkat Desa / Kelurahan</span>
                     </label><br>
                     <label class="inline-flex items-center">
-                        <input type="checkbox" name="III_32" value="Kader / IMP" class="form-checkbox text-indigo-600">
+                        <input type="checkbox" name="III_32[]" value="Kader / IMP" class="form-checkbox text-indigo-600">
                         <span class="ml-2">Kader / IMP</span>
                     </label><br>
                     <label class="inline-flex items-center">
-                        <input type="checkbox" name="III_32" value="Lainnya" class="form-checkbox text-indigo-600">
+                        <input type="checkbox" name="1" class="form-checkbox text-indigo-600 III_32">
                         <span class="ml-2">Lainnya</span>
+                        <div class="hidden III_32b">
+                            <input type="text" class="form-input III_32b" name="III_32[]" placeholder="Jawaban lainnya" disabled>
+                        </div>
                     </label>
                 </div>
             </div>

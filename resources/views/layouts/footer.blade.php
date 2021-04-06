@@ -132,6 +132,16 @@
         $('div.save').removeClass('hidden');
       }
     });
+    $('input.III_32').click(function() {
+        if ($('input.III_32').is(':checked')) {
+          $('div.III_32b').removeClass('hidden');
+          $('input.III_32b').prop("disabled", false);
+        } else {
+          $('input.III_32b').val('') == '';
+          $('input.III_32b').prop("disabled", true);
+          $('div.III_32b').addClass('hidden');
+        }
+    });
     </script>
 
 <script>

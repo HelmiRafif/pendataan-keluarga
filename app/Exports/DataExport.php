@@ -27,7 +27,7 @@ class DataExport implements FromArray, WithHeadings, ShouldAutoSize
         return [
             'Alamat',
             'RT',
-            'No',
+            'No Hp',
             'Nama Anggota Keluarga',
             'NIK',
             'Jenis Kelamin',
