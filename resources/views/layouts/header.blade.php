@@ -14,9 +14,8 @@
 	-->
 
 	<link href="{{ asset('css/custom.css') }}" rel="stylesheet">
-	<link href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css" rel="stylesheet">
 	{{-- <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css"> --}}
-	<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/tailwind.min.css') }}">
 	<!--Replace with your tailwind.css once created-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/lightpick.css') }}">
 
@@ -25,6 +24,9 @@
 	<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
 	<!--Responsive Extension Datatables CSS-->
 	<link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet">
+
+	{{-- fontawesome --}}
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 
 	<!-- Animation CSS-->
 	<style>		
@@ -91,6 +93,7 @@
 	
 	</style>
 
+	{{-- modal --}}
 	<style>
 		.modal {
 		transition: opacity 0.25s ease;
@@ -169,9 +172,45 @@
 </head>
 
 <div class="w-full flex items-center justify-between text-sm md:text-lg mx-auto bg-white p-2 md:p-4 fixed z-10 top-0 shadow">
-	<a class="flex items-center text-blue-400 no-underline hover:no-underline font-bold text-xl md:text-2xl lg:text-4xl"  href="#"> 
+	<a class="flex items-center text-blue-400 no-underline hover:no-underline font-bold text-xl md:text-2xl lg:text-4xl"  href="\"> 
 		<!-- <svg class="h-8 fill-current text-indigo-600 pr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm-5.6-4.29a9.95 9.95 0 0 1 11.2 0 8 8 0 1 0-11.2 0zm6.12-7.64l3.02-3.02 1.41 1.41-3.02 3.02a2 2 0 1 1-1.41-1.41z"/></svg> APP -->
 		<img class="h-8 fill-current text-purple-800 pr-2" src="{{asset('img/logo.png')}}"> Pendataan Keluarga 2021
 	</a>
+	{{-- <a class="float-right text-gray-500 hover:text-gray-700" href="">Logout <i class="fas fa-sign-out-alt"></i></a> --}}
+	<x-dropdown align="right" width="48">
+		<x-slot name="trigger">
+			<button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+				<div>{{ Auth::user()->name }}</div>
+
+				<div class="ml-1">
+					<svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+						<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+					</svg>
+				</div>
+			</button>
+		</x-slot>
+
+		<x-slot name="content">
+			<!-- Authentication -->
+			<form method="POST" action="{{ route('logout') }}">
+				@csrf
+				<x-dropdown-link :href="route('logout')"
+						onclick="event.preventDefault();
+									this.closest('form').submit();">
+					{{ __('Log out') }}
+				</x-dropdown-link>
+			</form>
+			
+			@if(Auth::user()->id == 1)
+			<form method="GET" action="{{ route('dashboard') }}">
+				<x-dropdown-link :href="route('dashboard')"
+				onclick="event.preventDefault();
+									this.closest('form').submit();">
+					{{ __('Dasbor') }} <i class="fas fa-download"></i>
+				</x-dropdown-link>
+			</form>
+			@endif
+		</x-slot>
+	</x-dropdown>
 </div>
 <body class="bg-gray-100 text-gray-900 tracking-wider leading-normal mt-14">

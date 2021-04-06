@@ -61,16 +61,14 @@
     
     <!--Left Col-->
 		<div class="flex flex-col w-auto md:w-3/5  justify-center text-center md:text-left overflow-y-hidden">
-      <h1 class="my-4 text-4xl md:text-8xl text-purple-800 font-bold leading-tight slide-in-bottom-h1">Selamat Datang</h1>
-      <p class="leading-normal text-lg md:text-2xl mb-8 slide-in-bottom-subtitle">Pendataan, awal perencanaan keluarga.</p>
-      <a class="my-3 mx-auto underline  rounded-full text-2xl p-2" href="/form">Isi Formulir
-        <i class="fas fa-angle-right"></i>
-      </a>
+		<h1 class="my-4 text-4xl md:text-8xl text-purple-800 font-bold leading-tight slide-in-bottom-h1">Selamat Datang</h1>
+		<p class="leading-normal text-lg md:text-2xl mb-8 slide-in-bottom-subtitle">Pendataan, awal perencanaan keluarga.</p>
+		<a class="my-3 mx-auto underline  rounded-full text-2xl p-2" href="/kependudukan">Isi Formulir <i class="fas fa-angle-right"></i></a>
     </div>
   
   <!--Right Col-->
-    <div class="w-2/5  text-right py-6 overflow-y-hidden ">
-      <img class="w-auto mx-auto slide-in-bottom" src="{{asset('img/logo.png')}}">
+		<div class="w-2/5  text-right py-6 overflow-y-hidden ">
+		<img class="w-auto mx-auto slide-in-bottom" src="{{asset('img/logo.png')}}">
     </div>
 		
 	</div>
