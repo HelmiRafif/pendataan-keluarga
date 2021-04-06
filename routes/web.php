@@ -101,13 +101,13 @@ Route::post('kb/store', function (Request $request) {
     if ( !isset($input['II_8'])) {
         $input['II_8'] = $input['II_8b'];
     }
-    if ( !isset($input['II_4_a'])) {
+    if ( isset($input['II_4_a'])) {
         $input['II_4_a'] = date('m-Y', strtotime($input['II_4_a']));
     }
-    if ( !isset($input['II_5_a'])) {
+    if ( isset($input['II_5_a'])) {
         $input['II_5_a'] = date('m-Y', strtotime($input['II_5_a']));
     }
-    if ( !isset($input['II_5_b'])) {
+    if ( isset($input['II_5_b'])) {
         $input['II_5_b'] = date('m-Y', strtotime($input['II_5_b']));
     }
     $input['id_keluarga'] = Auth::User()->name;
