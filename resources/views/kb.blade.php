@@ -234,7 +234,7 @@
                                 <span class="ml-2">Ya </span>
                                 <div class="reveal-if-active">
                                     <p>Berapa minggu usia kehamilan anda ?</p>
-                                    <input class=" form-input block w-3/5 focus:bg-white" id="II.3.a" type="number" min="0" max="99" placeholder="(Minggu)">
+                                    <input class=" form-input block w-3/5 focus:bg-white" name="II.3.a" type="number" min="0" max="99" placeholder="(Minggu)">
                                     <p class="mt-2">1.1 Apakah anda memang ingin hamil saat itu?</p>
                                     <input type="radio" class="form-radio " name="II.3.a.1" value="Ya, saya memang ingin hamil saat itu">
                                     <label class="ml-2">Ya, saya memang ingin hamil. </label> <br>

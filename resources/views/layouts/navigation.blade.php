@@ -57,18 +57,6 @@
                                 {{ __('Log out') }}
                             </x-dropdown-link>
                         </form>
-
-                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Kependudukan') }}
-                    </x-nav-link>
-
-                    <x-nav-link :href="route('dashboard-kb')" :active="request()->routeIs('dashboard-kb')">
-                        {{ __('Keluarga Berencana') }}
-                    </x-nav-link>
-
-                    <x-nav-link :href="route('dashboard-pembangunan')" :active="request()->routeIs('dashboard-pembangunan')">
-                        {{ __('Pembangunan Keluarga') }}
-                    </x-nav-link>
                     </x-slot>
                 </x-dropdown>
             </div>
@@ -90,6 +78,21 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard-kb')">
+                {{ __('Dashboard KB') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard-pembangunan')">
+                {{ __('Dashboard Pembangunan') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('download')">
+                {{ __('Download Data') }} <i class="fas fa-download"></i>
             </x-responsive-nav-link>
         </div>
 

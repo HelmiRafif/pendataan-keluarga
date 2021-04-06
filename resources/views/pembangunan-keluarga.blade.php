@@ -166,48 +166,48 @@
                             <div class="reveal-if-active">
                                 <p>Tanpa tegur sapa selama 3 hari berturut-turut</p>
                                 <label class="items-center pr-4 ">
-                                    <input type="radio" class="form-radio" name="III_3.a" value="Ya">
+                                    <input type="radio" class="form-radio" name="III_3a" value="Ya">
                                     <span class="ml-2">Ya </span>
                                 </label>
                                 <label class="items-center pr-4 ">
-                                    <input type="radio" class="form-radio" name="III_3.a" value="Tidak">
+                                    <input type="radio" class="form-radio" name="III_3a" value="Tidak">
                                     <span class="ml-2">Tidak </span>
                                 </label>
                             </div>
                             <div class="reveal-if-active">
                                 <p>Pisah ranjang antara suami dan istri selama 7 hari berturut-turut</p>
                                 <label class="items-center pr-4 ">
-                                    <input type="radio" class="form-radio" name="III_3.b" value="Ya">
+                                    <input type="radio" class="form-radio" name="III_3b" value="Ya">
                                     <span class="ml-2">Ya </span>
                                 </label>
                                 <label class="items-center pr-4 ">
-                                    <input type="radio" class="form-radio" name="III_3.b" value="Tidak">
+                                    <input type="radio" class="form-radio" name="III_3b" value="Tidak">
                                     <span class="ml-2">Tidak </span>
                                 </label>
                                 <label class="items-center pr-4 ">
-                                    <input type="radio" class="form-radio" name="III_3.b" value="Tidak Berlaku">
+                                    <input type="radio" class="form-radio" name="III_3b" value="Tidak Berlaku">
                                     <span class="ml-2">Tidak Berlaku</span>
                                 </label>
                             </div>
                             <div class="reveal-if-active">
                                 <p>Pisah ranjang antara suami dan istri selama 7 hari berturut-turut</p>
                                 <label class="items-center pr-4 ">
-                                    <input type="radio" class="form-radio" name="III_3.c" value="Ya">
+                                    <input type="radio" class="form-radio" name="III_3c" value="Ya">
                                     <span class="ml-2">Ya </span>
                                 </label>
                                 <label class="items-center pr-4 ">
-                                    <input type="radio" class="form-radio" name="III_3.c" value="Tidak">
+                                    <input type="radio" class="form-radio" name="III_3c" value="Tidak">
                                     <span class="ml-2">Tidak </span>
                                 </label>
                             </div>
                             <div class="reveal-if-active">
                                 <p>Kekerasan dalam rumah tangga</p>
                                 <label class="items-center pr-4 ">
-                                    <input type="radio" class="form-radio" name="III_3.d" value="Ya">
+                                    <input type="radio" class="form-radio" name="III_3d" value="Ya">
                                     <span class="ml-2">Ya </span>
                                 </label>
                                 <label class="items-center pr-4 ">
-                                    <input type="radio" class="form-radio" name="III_3.d" value="Tidak">
+                                    <input type="radio" class="form-radio" name="III_3d" value="Tidak">
                                     <span class="ml-2">Tidak </span>
                                 </label>
                             </div>
@@ -633,38 +633,38 @@
                         <label class="items-center">
                                 <p class="pb-2 pt-3">1. Usaha peningkatan pendapatan keluarga sejahtera uppks</p>
                                 <label class="items-center pr-4">
-                                    <input type="radio" class="form-radio" name="III_18.a" value="Ya">
+                                    <input type="radio" class="form-radio" name="III_18a" value="Ya">
                                     <span class="ml-2">Ya </span>
                                 </label>
                                 <label class="items-center pr-4">
-                                    <input type="radio" class="form-radio" name="III_18.a" value="Tidak">
+                                    <input type="radio" class="form-radio" name="III_18a" value="Tidak">
                                     <span class="ml-2">Tidak </span>
                                 </label>
                                 <p class="pb-2 pt-3">2. PNM mekar BUMN</p>
                                 <label class="items-center pr-4">
-                                    <input type="radio" class="form-radio" name="III_18.b" value="Ya">
+                                    <input type="radio" class="form-radio" name="III_18b" value="Ya">
                                     <span class="ml-2">Ya </span>
                                 </label>
                                 <label class="items-center pr-4">
-                                    <input type="radio" class="form-radio" name="III_18.b" value="Tidak">
+                                    <input type="radio" class="form-radio" name="III_18b" value="Tidak">
                                     <span class="ml-2">Tidak </span>
                                 </label>
                                 <p class="pb-2 pt-3">3. Program keluarga harapan PKH Kemensos</p>
                                 <label class="items-center pr-4">
-                                    <input type="radio" class="form-radio" name="III_18.c" value="Ya">
+                                    <input type="radio" class="form-radio" name="III_18c" value="Ya">
                                     <span class="ml-2">Ya </span>
                                 </label>
                                 <label class="items-center pr-4">
-                                    <input type="radio" class="form-radio" name="III_18.c" value="Tidak">
+                                    <input type="radio" class="form-radio" name="III_18c" value="Tidak">
                                     <span class="ml-2">Tidak </span>
                                 </label>
                                 <p class="pb-2 pt-3">4. Instansi pemerintah lain atau swasta atau LSM</p>
                                 <label class="items-center pr-4">
-                                    <input type="radio" class="form-radio" name="III_18.d" value="Ya">
+                                    <input type="radio" class="form-radio" name="III_18d" value="Ya">
                                     <span class="ml-2">Ya </span>
                                 </label>
                                 <label class="items-center pr-4">
-                                    <input type="radio" class="form-radio" name="III_18.d" value="Tidak">
+                                    <input type="radio" class="form-radio" name="III_18d" value="Tidak">
                                     <span class="ml-2">Tidak </span>
                                 </label>
                         </label>

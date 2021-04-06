@@ -123,7 +123,7 @@ Route::get('download', function(){
     ->leftJoin('pembangunan','kb.id_keluarga','=','pembangunan.id_keluarga')
     ->orderBy('kependudukan.id_keluarga','asc')
     -> get();
-
+    dd($kependudukan);
     $a = [];
 
     // dd($kependudukan);
