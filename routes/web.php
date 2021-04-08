@@ -228,18 +228,18 @@ Route::get('download', function(){
 
 Route::delete('delete/{table}/{id?}', function($table,$id)
 {
-    if ($table == 'Kependudukan') {
+    if ($table == 'kependudukan') {
         DB::table($table)->where('id',$id)->delete();
     } else {    
         DB::table($table)->where('id_keluarga',$id)->delete();
     }
-    if ($table == 'Kb') {
+    if ($table == 'kb') {
         return redirect()->route('dashboard-kb');
     }
-    else if ($table == 'Pembangunan') {
+    else if ($table == 'pembangunan') {
         return redirect()->route('dashboard-pembangunan');
     }
-    else if ($table == 'Kependudukan') {
+    else if ($table == 'kependudukan') {
         return redirect()->route('dashboard');
     }
 })->middleware(['auth'])->name('delete');
