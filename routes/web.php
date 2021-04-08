@@ -120,8 +120,8 @@ Route::post('pembangunan/store', function (Request $request) {
     $input = $request->all();
 
     // dd($input);
-    $input['III_32']="";
-    $input['III_30']="";
+    $input['III_32']=array();
+    $input['III_30']=array();
     $input['III_32']= implode(", ",$input['III_32']);
     $input['III_30']= implode(", ",$input['III_30']);
 
