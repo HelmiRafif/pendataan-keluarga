@@ -14,6 +14,7 @@ class Pembangunan extends Migration
     public function up()
     {
         Schema::create('pembangunan', function (Blueprint $table) {
+            $table->id('id');
             $table->string('id_keluarga');
             $table->string('III_1')->nullable();
             $table->string('III_2')->nullable();

@@ -9,9 +9,8 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	
-    <!-- Font Awesome if you need it
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-	-->
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
 
 	<link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 	{{-- <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css"> --}}

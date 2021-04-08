@@ -226,4 +226,22 @@ Route::get('download', function(){
     return Excel::download($export, 'data posyandu.xlsx');
 })->middleware(['auth'])->name('download');
 
+Route::delete('delete/{table}/{id?}', function($table,$id)
+{
+    if ($table == 'Kependudukan') {
+        DB::table($table)->where('id',$id)->delete();
+    } else {    
+        DB::table($table)->where('id_keluarga',$id)->delete();
+    }
+    if ($table == 'Kb') {
+        return redirect()->route('dashboard-kb');
+    }
+    else if ($table == 'Pembangunan') {
+        return redirect()->route('dashboard-pembangunan');
+    }
+    else if ($table == 'Kependudukan') {
+        return redirect()->route('dashboard');
+    }
+})->middleware(['auth'])->name('delete');
+
 require __DIR__.'/auth.php';

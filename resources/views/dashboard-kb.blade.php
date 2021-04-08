@@ -40,6 +40,7 @@
                     <table  class="tabel table-auto stripe hover">
                         <thead>
                             <tr>                                
+                                <th>Hapus</th>
                                 <th>id keluarga</th>
                                 <th>1</th>
                                 <th>1.a.1</th>
@@ -66,6 +67,13 @@
                         <tbody>
                             @foreach ($data as $data)
                             <tr>
+                                <td>
+                                    {!! Form::open(['method' => 'DELETE','route' => ['delete','Kb',$data->id_keluarga],'style'=>'display:inline']) !!}
+                                    <button class=" text-red-500 hover:text-red-700 text-xl font-bold py-2 px-4 rounded" type="submit">
+                                        <i class="fas fa fa-times-circle"></i>
+                                    </button>
+                                    {!! Form::close() !!}
+                                </td>
                                 <td>{{ $data->id_keluarga }}</td>
                                 <td>{{ $data->II_1 }}</td>
                                 <td>{{ $data->II_1_a_1 }}</td>

@@ -25,7 +25,7 @@
                     </x-nav-link>
                    
                     <x-nav-link :href="route('download')" :active="request()->routeIs('download')">
-                        {{ __('Download Data') }} <i class="fas fa-download"></i>
+                        {{ __('Download Data ') }} <i class="fas fa-download pl-2"></i>
                     </x-nav-link>
                 </div>
                 
@@ -92,7 +92,7 @@
         </div>
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('download')">
-                {{ __('Download Data') }} <i class="fas fa-download"></i>
+                {{ __('Download Data ') }} <i class="fas fa-download pl-2"></i>
             </x-responsive-nav-link>
         </div>
 

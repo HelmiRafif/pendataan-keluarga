@@ -240,7 +240,7 @@
                             <option value="Belum Kawin">Belum Kawin</option>
                             <option value="Kawin">Kawin</option>
                             <option value="Cerai Hidup">Cerai Hidup</option>
-                            <option value="Cera">Cerai Mati</option>
+                            <option value="Cerai Mati">Cerai Mati</option>
                         </select>
                     </div>
                 </div>
