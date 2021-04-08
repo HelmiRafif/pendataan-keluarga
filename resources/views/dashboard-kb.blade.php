@@ -68,7 +68,7 @@
                             @foreach ($data as $data)
                             <tr>
                                 <td>
-                                    {!! Form::open(['method' => 'DELETE','route' => ['delete','Kb',$data->id_keluarga],'style'=>'display:inline']) !!}
+                                    {!! Form::open(['method' => 'DELETE','route' => ['delete','kb',$data->id_keluarga],'style'=>'display:inline']) !!}
                                     <button class=" text-red-500 hover:text-red-700 text-xl font-bold py-2 px-4 rounded" type="submit">
                                         <i class="fas fa fa-times-circle"></i>
                                     </button>
