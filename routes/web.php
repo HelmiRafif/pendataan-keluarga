@@ -59,8 +59,9 @@ Route::get('/kependudukan', function(Request $request) {
     $kependudukan = Kependudukan::select()
                 ->where('id_keluarga',$id)
                 ->get();
+    $count = $kependudukan->count();
     // dd($kependudukan);
-    return view('kependudukan', compact('kependudukan'))->with('i');
+    return view('kependudukan', compact('kependudukan','count'))->with('i');
 })->middleware(['auth'])->name('kependudukan');
 
 Route::get('/kb', function () {

@@ -133,12 +133,12 @@
                         </div>
                         <div class="w-full">
                             <div class="mb-2 px-4">
-                                <input class="form-input block w-full focus:bg-white" name="rt" type="text" placeholder="RT">
+                                <input class="form-input block w-full focus:bg-white" name="rt" type="text" placeholder="RT" required>
                             </div>
                         </div>
                         <div class="w-full">
                             <div class="mb-2 px-4">
-                                <input class="form-input block w-full focus:bg-white" name="no_hp" type="text" placeholder="No HP">
+                                <input class="form-input block w-full focus:bg-white" name="no_hp" type="text" placeholder="No HP" required>
                             </div>
                         </div>
                     </div>

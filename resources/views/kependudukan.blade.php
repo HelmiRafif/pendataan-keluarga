@@ -89,7 +89,7 @@
             {{-- End Progress bar --}}
 		</div>
 
-        <table id="table" class="stripe hover" style="width:70%; padding-top: 1em;  padding-bottom: 1em;">
+        <table id="table" class="stripe hover" style=" padding-top: 1em;  padding-bottom: 1em;">
             <thead>
                 <tr>
                     <th data-priority="1">No</th>
@@ -136,13 +136,18 @@
             <button class="modal-open bg-transparent align-middle border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full">Tambah Anggota Keluarga <i class="fas fa-plus"></i></button>
         </div>
 
+        @if($count > 0)
+            
         <div class="text-center mx-auto py-6">
             <a href="/kb"><button class="bg-indigo-600 align-middle text-white hover:text-gray-300 font-bold py-3 px-4 rounded-full">Selanjutnya <i class="fas fa-arrow-right"></i></button></a>
         </div>
+        
+        @endif
+
     <!-- MODAL BOS  -->
     <!-- <div class="modal md:w-full opacity-0 pointer-events-none overflow-y-scroll fixed w-full h-full top-0 left-0 flex items-center z-10" style="height:255%;"> -->
     <div class="modal opacity-0 pointer-events-none  overflow-y-scroll fixed w-full bg-gray-900 bg-opacity-50 h-full top-0 left-0 z-10">
-
+        <div class="modal-overlay"></div>
         <!-- <div class="modal-container bg-white w-11/12 md:max-w-3xl mx-auto rounded shadow-lg z-50 overflow-y-auto"> -->
         <div class="modal-container bg-white w-11/12 md:max-w-3xl mx-auto my-4 rounded shadow-lg z-50 overflow-y-scroll">
         
@@ -175,7 +180,7 @@
                         </label>
                     </div>
                     <div class="md:w-2/3">
-                        <input name="I_2" class="form-input block w-full focus:bg-white" id="my-textfield" type="text" value="">
+                        <input name="I_2" class="form-input block w-full focus:bg-white" id="my-textfield" type="text" required>
                     </div>
                 </div>
 
