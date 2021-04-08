@@ -141,7 +141,7 @@
         </div>
     <!-- MODAL BOS  -->
     <!-- <div class="modal md:w-full opacity-0 pointer-events-none overflow-y-scroll fixed w-full h-full top-0 left-0 flex items-center z-10" style="height:255%;"> -->
-    <div class="modal  overflow-y-scroll fixed w-full bg-gray-900 bg-opacity-50 h-full top-0 left-0 z-10">
+    <div class="modal opacity-0 pointer-events-none  overflow-y-scroll fixed w-full bg-gray-900 bg-opacity-50 h-full top-0 left-0 z-10">
 
         <!-- <div class="modal-container bg-white w-11/12 md:max-w-3xl mx-auto rounded shadow-lg z-50 overflow-y-auto"> -->
         <div class="modal-container bg-white w-11/12 md:max-w-3xl mx-auto my-4 rounded shadow-lg z-50 overflow-y-scroll">
