@@ -117,11 +117,11 @@ Route::post('kb/store', function (Request $request) {
 })->middleware(['auth'])->name('kb.store');
 
 Route::post('pembangunan/store', function (Request $request) {
-    $input = $request->all();
-
-    // dd($input);
     $input['III_32']=array();
     $input['III_30']=array();
+    
+    $input = $request->all();
+    // dd($input);
     $input['III_32']= implode(", ",$input['III_32']);
     $input['III_30']= implode(", ",$input['III_30']);
 
