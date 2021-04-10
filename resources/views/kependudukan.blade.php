@@ -256,6 +256,7 @@
                         <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4" for="my-textfield">
                             Usia Kawin Pertama
                         </label>
+                        <p class="mb-2">(Di umur berapa anda pertama kali menikah)</p>
                     </div>
                     <div class="md:w-2/3">
                         <input name="I_8" class="form-input block w-3/12 focus:bg-white" id="my-textfield" type="number" min="0" max="100">
