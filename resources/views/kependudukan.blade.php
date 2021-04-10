@@ -230,7 +230,7 @@
                         </label>
                     </div>
                     <div class="md:w-2/3">
-                        <input name="I_456" class="form-input focus:bg-white" type="text" id="datepicker"/>
+                        <input name="I_456" class="form-input focus:bg-white" type="date" id="datepicker"/>
                     </div>
                 </div>
 
