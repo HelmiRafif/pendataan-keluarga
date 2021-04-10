@@ -41,6 +41,7 @@
                         <thead>
                             <tr>                                
                                 <th>Hapus</th>
+                                <th>Edit</th>
                                 <th>id keluarga</th>
                                 <th>1</th>
                                 <th>1.a.1</th>
@@ -51,6 +52,7 @@
                                 <th>3</th>
                                 <th>3.a</th>
                                 <th>3.a.1</th>
+                                <th>3.b</th>
                                 <th>4</th>
                                 <th>4.a</th>
                                 <th>5</th>
@@ -74,6 +76,12 @@
                                     </button>
                                     {!! Form::close() !!}
                                 </td>
+                                <td>
+                                    <a href="{{ route('edit', [$data->id_keluarga, 'kb']) }}"><button class="text-yellow-500 hover:text-yellow-700 text-xl font-bold py-2 px-4 rounded">
+                                        <i class="fa fa-edit"></i>
+                                        </button>
+                                    </a>
+                                </td>
                                 <td>{{ $data->id_keluarga }}</td>
                                 <td>{{ $data->II_1 }}</td>
                                 <td>{{ $data->II_1_a_1 }}</td>
@@ -84,6 +92,7 @@
                                 <td>{{ $data->II_3 }}</td>
                                 <td>{{ $data->II_3_a }}</td>
                                 <td>{{ $data->II_3_a_1 }}</td>
+                                <td>{{ $data->II_3_b }}</td>
                                 <td>{{ $data->II_4 }}</td>
                                 <td>{{ $data->II_4_a }}</td>
                                 <td>{{ $data->II_5 }}</td>

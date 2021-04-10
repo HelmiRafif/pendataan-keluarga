@@ -247,4 +247,76 @@ Route::delete('delete/{table}/{id?}', function($table,$id)
     }
 })->middleware(['auth'])->name('delete');
 
+
+// edit 
+Route::get('edit/{table}/{id?}', function($id, $table){
+    //  dd($id,$table);
+    if ($table == 'kependudukan') {
+       $data = Kependudukan::find($id);
+    } else if ($table == 'kb') {    
+        $data= Kb::where('id_keluarga',$id)->first();
+    }
+     else if ($table == 'pembangunan') {    
+        $data= Pembangunan::where('id_keluarga',$id)->first();
+    }
+
+    if ($table == 'kependudukan') {
+        return view('edit-kependudukan', compact('data','id'));
+    }
+    else if ($table == 'kb') {
+        return view('edit-kb', compact('data','id'));
+    }
+    else if ($table == 'pembangunan') {
+        $value_30 = array("Koran / Majalah / Tabloid", 
+                    "Televisi / Radio / Videotron",
+                    "Facebook / Instagram / Twitter / Whatsapp / Youtube / Website",
+                    "Seminar / Pengajian / Ibadat / Workshop / Pertemuan Kelompok Kegiatan");
+        $value_32 = array("Pejabat Pemerintah", 
+                    "Petugas Keluarga Berencana (PKB/PLKB/Petugas lapangan KB lainnya",
+                    "Guru / Dosen",
+                    "Tokoh Agama",
+                    "Tokoh Masyarakat",
+                    "Dokter",
+                    "Bidan / Perawat",
+                    "Perangkat Desa / Kelurahan",
+                    "Kader / IMP");
+        $data->III_30 = explode(", ", $data->III_30);
+        $data->III_32 = explode(", ", $data->III_32);
+        return view('edit-pembangunan', compact('data','id','value_30','value_32'));
+    }
+})->middleware(['auth'])->name('edit');
+
+// update
+Route::patch('update/{table}/{id?}', function(Request $request, $id, $table){
+    if ($table == 'kependudukan') {
+        $data = Kependudukan::find($id);
+     } else if ($table == 'kb') {    
+         $data= Kb::where('id_keluarga',$id)->first();
+     }
+      else if ($table == 'pembangunan') {    
+         $data= Pembangunan::where('id_keluarga',$id)->first();
+    }
+    
+    $input = $request->all();
+    if (isset($input['III_30'])) {  
+        $input['III_30'] = implode(", ", $input['III_30']);
+    } else $input['III_30'] = null;
+    if (isset($input['III_32'])) {  
+        $input['III_32'] = implode(", ", $input['III_32']);
+    } else $input['III_32'] = null;
+    $data->update($input);
+    // dd($data);
+    if ($table == 'kependudukan') {
+        return redirect()->route('dashboard');
+    }
+    else if ($table == 'kb') {
+        return redirect()->route('dashboard-kb');
+    }
+    else if ($table == 'pembangunan') {
+        return redirect()->route('dashboard-pembangunan');
+    }
+})->middleware(['auth'])->name('update');
+
+
+
 require __DIR__.'/auth.php';

@@ -45,6 +45,7 @@
             <thead>
                 <tr>
                     <th data-priority="1">Hapus</th>
+                    <th data-priority="1">Edit</th>
                     <th data-priority="2">Id Keluarga</th>
                     <th data-priority="2">Nama Anggota Keluarga</th>
                     <th data-priority="2">NIK</th>
@@ -71,6 +72,12 @@
                             <i class="fas fa fa-times-circle"></i>
                         </button>
                         {!! Form::close() !!}
+                    </td>
+                    <td>
+                        <a href="{{ route('edit', [$row->id, 'kependudukan']) }}"><button class="text-yellow-500 hover:text-yellow-700 text-xl font-bold py-2 px-4 rounded">
+                            <i class="fa fa-edit"></i>
+                            </button>
+                        </a>
                     </td>
                     <td>{{ $row->id_keluarga }}</td>
                     <td>{{ $row->I_2 }}</td>

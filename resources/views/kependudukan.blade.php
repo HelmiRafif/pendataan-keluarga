@@ -369,7 +369,8 @@
                             <option value="Tamat SD/Sederajat">Tamat SD / Sederajat</option>
                             <option value="Masih SLTP/Sederajat">Masih SLTP / Sederajat</option>
                             <option value="Tamat SLTP/Sederajat">Tamat SLTP / Sederajat</option>
-                            <option value="Tamat SLTA/Sederajat">Masih SLTA / Sederajat</option>
+                            <option value="Masih SLTA/Sederajat">Masih SLTA / Sederajat</option>
+                            <option value="Tamat SLTA/Sederajat">Tamat SLTA / Sederajat</option>
                             <option value="Masih PT/Akademi">Masih PT / Akademi</option>
                             <option value="Tamat PT/Akademi">Tamat PT / Akademi</option>
                         </select>
