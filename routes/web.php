@@ -99,7 +99,7 @@ Route::post('kb/store', function (Request $request) {
     $input['II_5_b'] = "";
     $input['II_8'] = "";
     $input = $request->all();
-    dd($input);
+    // dd($input);
     if ( !isset($input['II_8'])) {
         $input['II_8'] = $input['II_8b'];
     }
