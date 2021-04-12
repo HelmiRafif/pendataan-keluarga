@@ -146,7 +146,7 @@ Route::get('download', function(){
         $a[] = [
             'Alamat' => $value->Alamat,
             'RT' => $value->rt,
-            'No HP' => $value->No_hp,
+            'No HP' => $value->No_HP,
             'Nama Anggota Keluarga' => $value->I_2,
             'NIK' => $value->I_2a ,
             'Jenis Kelamin' => $value->I_3 ,
@@ -222,7 +222,7 @@ Route::get('download', function(){
             'III_31' => $value->III_31,
             'III_32' => $value->III_32,
         ];
-        // dd($a);
+        // dd($a, $kependudukan);
     }
     $export = new DataExport($a);
 

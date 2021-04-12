@@ -43,6 +43,7 @@
                                 <th>Hapus</th>
                                 <th>Edit</th>
                                 <th>id keluarga</th>
+                                <th>No HP</th>
                                 <th>1</th>
                                 <th>1.a.1</th>
                                 <th>1.a.2</th>
@@ -83,6 +84,7 @@
                                     </a>
                                 </td>
                                 <td>{{ $data->id_keluarga }}</td>
+                                <td>{{ $data->No_HP }}</td>
                                 <td>{{ $data->II_1 }}</td>
                                 <td>{{ $data->II_1_a_1 }}</td>
                                 <td>{{ $data->II_1_a_1 }}</td>

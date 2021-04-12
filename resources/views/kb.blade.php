@@ -138,7 +138,7 @@
                         </div>
                         <div class="w-full">
                             <div class="mb-2 px-4">
-                                <input class="form-input block w-full focus:bg-white" name="no_hp" type="text" placeholder="No HP" required>
+                                <input class="form-input block w-full focus:bg-white" name="No_HP" type="text" placeholder="No HP" required>
                             </div>
                         </div>
                     </div>
@@ -305,7 +305,7 @@
                 <div class="md:text-xl mb-6">
                     <div class="w-auto">
                         <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0" for="jumlah melahirkan">
-                            Apakah dalam 12 bulan (angka) (angka) terakhir Ibu atau Suami “PERNAH” menggunakan alat/obat/cara KB (Kontrasepsi)?
+                            Apakah dalam 12 bulan terakhir Ibu atau Suami “PERNAH” menggunakan alat/obat/cara KB (Kontrasepsi)?
                         </label>
                     </div>
                     <div class="w-auto">
