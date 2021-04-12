@@ -11,7 +11,7 @@ class Kb extends Model
 
     protected $table = 'kb';
     protected $fillable = [
-        'no_hp',
+        'No_HP',
         'alamat',
         'rt',
         'id_keluarga',
