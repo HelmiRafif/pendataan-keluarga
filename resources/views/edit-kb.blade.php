@@ -119,7 +119,7 @@
                         </div>
                         <div class="w-full">
                             <div class="mb-2 px-4">
-                                <input class="form-input block w-full focus:bg-white" name="no_hp" type="text" placeholder="No HP" value="{{ $data->No_HP }}" required>
+                                <input class="form-input block w-full focus:bg-white" name="No_HP" type="text" placeholder="No HP" value="{{ $data->No_HP }}" required>
                             </div>
                         </div>
                     </div>

@@ -9,8 +9,13 @@ namespace App\Exports;
 use Maatwebsite\Excel\Concerns\FromArray;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
+use Maatwebsite\Excel\Concerns\WithCustomValueBinder;
+use PhpOffice\PhpSpreadsheet\Cell\DefaultValueBinder;
+use PhpOffice\PhpSpreadsheet\Cell\DataType;
+use PhpOffice\PhpSpreadsheet\Cell\Cell;
+use Maatwebsite\Excel\Concerns\ToModel;
 
-class DataExport implements FromArray, WithHeadings, ShouldAutoSize
+class DataExport extends DefaultValueBinder implements FromArray, WithHeadings, ShouldAutoSize, WithCustomValueBinder
 {
     /**
     * @return \Illuminate\Support\Collection
@@ -21,6 +26,15 @@ class DataExport implements FromArray, WithHeadings, ShouldAutoSize
     public function __construct(array $download)
     {
         $this->download = $download;
+    }
+    public function bindValue(Cell $cell, $value)
+    {
+        if (is_string($value)) {
+            $cell->setValueExplicit($value, DataType::TYPE_STRING);
+
+            return true;
+        }
+        return parent::bindValue($cell, $value);
     }
     public function headings(): array
     {
