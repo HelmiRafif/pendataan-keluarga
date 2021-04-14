@@ -78,7 +78,7 @@
                                     {!! Form::close() !!}
                                 </td>
                                 <td>
-                                    <a href="{{ route('edit', [$data->id, 'kb']) }}"><button class="text-yellow-500 hover:text-yellow-700 text-xl font-bold py-2 px-4 rounded">
+                                    <a href="{{ route('edit', [ 'kb', $data->id]) }}"><button class="text-yellow-500 hover:text-yellow-700 text-xl font-bold py-2 px-4 rounded">
                                         <i class="fa fa-edit"></i>
                                         </button>
                                     </a>

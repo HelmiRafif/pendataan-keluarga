@@ -250,7 +250,7 @@ Route::delete('delete/{table}/{id?}', function($table,$id)
 
 
 // edit 
-Route::get('edit/{table}/{id?}', function($id, $table){
+Route::get('edit/{table}/{id?}', function($table, $id){
     
     if ($table == 'kependudukan') {
        $data = Kependudukan::find($id);
