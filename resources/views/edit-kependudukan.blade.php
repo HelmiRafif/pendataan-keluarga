@@ -11,7 +11,7 @@
         
 
         <div class="md:w-full py-4 text-left px-4 my-2">
-            {!! Form::model($data, ['method' => 'PATCH', 'route' => ['update',$data->id,'kependudukan']]) !!}
+            {!! Form::model($data, ['method' => 'PATCH', 'route' => ['update', 'kependudukan', $data->id]]) !!}
 
             <!--Modal Body-->
 

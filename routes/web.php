@@ -251,15 +251,14 @@ Route::delete('delete/{table}/{id?}', function($table,$id)
 
 // edit 
 Route::get('edit/{table}/{id?}', function($id, $table){
-    //  dd($id,$table);
+    
     if ($table == 'kependudukan') {
        $data = Kependudukan::find($id);
     } else if ($table == 'kb') {    
-        $data= Kb::where('id_keluarga',$id)->first();
-        // dd($data);
+        $data= Kb::find($id);
     }
      else if ($table == 'pembangunan') {    
-        $data= Pembangunan::where('id_keluarga',$id)->first();
+        $data= Pembangunan::find($id);
     }
 
     if ($table == 'kependudukan') {
@@ -289,7 +288,8 @@ Route::get('edit/{table}/{id?}', function($id, $table){
 })->middleware(['auth'])->name('edit');
 
 // update
-Route::patch('update/{table}/{id?}', function(Request $request, $id, $table){
+Route::patch('update/{table}/{id?}', function(Request $request, $table, $id){
+    
     if ($table == 'kependudukan') {
         $data = Kependudukan::find($id);
     } else if ($table == 'kb') {    

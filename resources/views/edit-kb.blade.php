@@ -100,7 +100,7 @@
             <!--Card-->
             <div id='pertanyaan1' class="p-3 pb-5 md:p-8 mt-2 lg:mt-0 rounded-md shadow bg-white">
                 <!-- <form> -->
-                {!! Form::model($data, ['method' => 'PATCH', 'route' => ['update',$data->id,'kb']]) !!}
+                {!! Form::model($data, ['method' => 'PATCH', 'route' => ['update','kb',$data->id]]) !!}
                     <div class="md:text-xl mb-6">
                         <div class="w-auto mb-1">
                             <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0" >
