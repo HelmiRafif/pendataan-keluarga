@@ -256,6 +256,7 @@ Route::get('edit/{table}/{id?}', function($id, $table){
        $data = Kependudukan::find($id);
     } else if ($table == 'kb') {    
         $data= Kb::where('id_keluarga',$id)->first();
+        // dd($data);
     }
      else if ($table == 'pembangunan') {    
         $data= Pembangunan::where('id_keluarga',$id)->first();
@@ -291,11 +292,11 @@ Route::get('edit/{table}/{id?}', function($id, $table){
 Route::patch('update/{table}/{id?}', function(Request $request, $id, $table){
     if ($table == 'kependudukan') {
         $data = Kependudukan::find($id);
-     } else if ($table == 'kb') {    
-         $data= Kb::where('id_keluarga',$id)->first();
-     }
-      else if ($table == 'pembangunan') {    
-         $data= Pembangunan::where('id_keluarga',$id)->first();
+    } else if ($table == 'kb') {    
+        $data= Kb::find($id);
+    }
+    else if ($table == 'pembangunan') {    
+        $data= Pembangunan::find($id);
     }
     
     $input = $request->all();
@@ -305,6 +306,7 @@ Route::patch('update/{table}/{id?}', function(Request $request, $id, $table){
     if (isset($input['III_32'])) {  
         $input['III_32'] = implode(", ", $input['III_32']);
     } else $input['III_32'] = null;
+    
     $data->update($input);
     // dd($data);
     if ($table == 'kependudukan') {
