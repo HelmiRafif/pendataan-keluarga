@@ -67,15 +67,17 @@ Route::get('/kependudukan', function(Request $request) {
 Route::get('/kb', function () {
     $name = Auth::user()->name;
     $count = Kb::where('id_keluarga', $name)->count();
-    return view('kb', compact('count','name'));
+    $id = Kb::select('id')->where('id_keluarga', $name)->first();
+    return view('kb', compact('count','name','id'));
 })->middleware(['auth'])->name('kb');
 
 
 Route::get('/pembangunan-keluarga', function () {
     $id = Auth::user()->name;
+    $edit = Pembangunan::select('id')->where('id_keluarga',$id)->first();
     $count = Pembangunan::where('id_keluarga', $id)->count();
     if ($count > 0) {
-        return view('selesai');
+        return view('selesai',compact('edit'));
     } else{
         return view('pembangunan-keluarga');
     }
@@ -118,17 +120,26 @@ Route::post('kb/store', function (Request $request) {
 })->middleware(['auth'])->name('kb.store');
 
 Route::post('pembangunan/store', function (Request $request) {
-    $input['III_32']=array();
-    $input['III_30']=array();
+    // $input['III_32']=array();
+    // $input['III_30']=array();
     
     $input = $request->all();
     // dd($input);
-    $input['III_32']= implode(", ",$input['III_32']);
-    $input['III_30']= implode(", ",$input['III_30']);
+    // if (isset($input['III_32'])) {
+    //     $input['III_32']= implode(", ",$input['III_32']);
+    //     $input['III_30']= implode(", ",$input['III_30']);
+    // }
+
+    if (isset($input['III_30'])) {  
+        $input['III_30'] = implode(", ", $input['III_30']);
+    } else $input['III_30'] = null;
+    if (isset($input['III_32'])) {  
+        $input['III_32'] = implode(", ", $input['III_32']);
+    } else $input['III_32'] = null;
 
     $input['id_keluarga'] = Auth::User()->name;
     $input = Pembangunan::create($input);
-    return view('selesai');
+    return redirect()->route('pembangunan-keluarga');
 })->middleware(['auth'])->name('pembangunan.store');
 
 Route::get('download', function(){
@@ -309,14 +320,29 @@ Route::patch('update/{table}/{id?}', function(Request $request, $table, $id){
     
     $data->update($input);
     // dd($data);
-    if ($table == 'kependudukan') {
-        return redirect()->route('dashboard');
-    }
-    else if ($table == 'kb') {
-        return redirect()->route('dashboard-kb');
-    }
-    else if ($table == 'pembangunan') {
-        return redirect()->route('dashboard-pembangunan');
+
+    $auth = Auth::user()->id;
+
+    if ($auth == 1) {
+        if ($table == 'kependudukan') {
+            return redirect()->route('dashboard');
+        }
+        else if ($table == 'kb') {
+            return redirect()->route('dashboard-kb');
+        }
+        else if ($table == 'pembangunan') {
+            return redirect()->route('dashboard-pembangunan');
+        }
+    } else {
+        if ($table == 'kependudukan') {
+            return redirect()->route('kependudukan');
+        }
+        else if ($table == 'kb') {
+            return redirect()->route('kb');
+        }
+        else if ($table == 'pembangunan') {
+            return redirect()->route('pembangunan-keluarga');
+        }
     }
 })->middleware(['auth'])->name('update');
 

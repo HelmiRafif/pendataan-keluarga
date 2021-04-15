@@ -95,11 +95,15 @@
                 <h2 class="font-semibold text-3xl mb-6">Selesai</h2>
                 <p class="text-gray-700 font-normal mb-4">Data pada form ini berhasil dikirim, silahkan lanjut ke pertanyaan selanjutnya</p>
 
-                <a class="shadow bg-red-500 mx-2 hover:bg-red-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" href='kependudukan'>
+                <a class="my-3 md:inline block shadow bg-red-500 mx-2 hover:bg-red-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" href='kependudukan'>
                     <i class="fas fa-arrow-left mr-2"></i> Kembali 
                 </a>
 
-                <a class="shadow bg-red-500 mx-2 hover:bg-red-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" href='pembangunan-keluarga'>
+                <a class="my-3 md:inline block shadow bg-yellow-500 mx-2 hover:bg-yellow-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" href="{{ route('edit', ['kb', $id->id]) }}">
+                    <i class="fas fa-edit mr-2"></i> Edit
+                </a>
+
+                <a class="my-3 md:inline block shadow bg-green-500 mx-2 hover:bg-green-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" href='pembangunan-keluarga'>
                     Lanjut <i class="fas fa-arrow-right ml-2"></i>
                 </a>
 

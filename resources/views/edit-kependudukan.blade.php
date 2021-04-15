@@ -61,10 +61,9 @@
                         </label>
                     </div>
                     <div class="md:w-2/3">
-                        <input name="I_456" value="{{$data->I_456}}" class="form-input focus:bg-white" type="text" id="datepicker"/>
+                        <input name="I_456" value="{{$data->I_456}}" class="form-input focus:bg-white" type="date">
                     </div>
                 </div>
-
                 <div class="md:flex mb-6">
                     <div class="md:w-2/3">
                         <label class="block text-gray-600 font-bold md:text-right md:mr-3 mb-3 md:mb-0 pr-4" for="my-select">

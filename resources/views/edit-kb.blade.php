@@ -135,7 +135,7 @@
                     <div class="md:text-xl mb-6">
                         <div class="w-auto">
                             <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0" for="jumlah melahirkan">
-                                Sudah Berapa Kali Ibu Melahirkan?
+                                1. Sudah Berapa Kali Ibu Melahirkan?
                             </label>
                         </div>
                         <div class="w-auto">
@@ -182,7 +182,7 @@
                 <div class="md:text-xl mb-6">
                     <div class="w-auto">
                         <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0" for="jumlah melahirkan">
-                            Menurut anda berapa jumlah anak yang ideal?
+                            2. Menurut anda berapa jumlah anak yang ideal?
                         </label>
                     </div>
                     <div class="w-auto">
@@ -205,7 +205,7 @@
                 <div class="md:text-xl mb-6">
                     <div class="w-auto">
                         <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0" for="jumlah melahirkan">
-                            Apakah Ibu saat ini sedang hamil ?
+                            3. Apakah Ibu saat ini sedang hamil ?
                         </label>
                     </div>
                     <div class="w-auto">
@@ -215,7 +215,7 @@
                                 {!! Form::select('II_3', [''=>'', 'Ya' => 'Ya', 'Tidak' => 'Tidak'], $data->II_3, array('class' => 'form-input')) !!}
                                 {{-- <span class="ml-2">Ya </span> --}}
                                 <div class="ml-2 md:ml-5">
-                                    <p>Berapa minggu usia kehamilan anda ?</p>
+                                    <p>1. Berapa minggu usia kehamilan anda ?</p>
                                     <input class=" form-input block w-3/5 focus:bg-white" name="II.3.a" type="number" min="0" max="99" value="{{ $data->II_1_a_2 }}" placeholder="(Minggu)">
                                     <p class="mt-2">1.1 Apakah anda memang ingin hamil saat itu?</p>
 
@@ -226,8 +226,9 @@
                                 
                                 <div class="ml-2 md:ml-5">
                                     <p class="mt-2">2.1. Apakah ibu menginginkan anak lagi?</p>
-                                 
                                     {!! Form::select('II_3_b', [''=>'','Ya, Ingin anak segera' => 'Ya, Ingin anak segera', 'Ya, Ingin hamil nanti/kemudian' => 'Ya, Ingin hamil nanti/kemudian', 'Tidak ingin anak lagi' => 'Tidak ingin anak lagi'], $data->II_3_b, array('class' => 'form-input')) !!}
+                                    <p class="mt-2 font-normal text-sm">*Lanjut ke Nomor 5 Jika Ya</p>
+                                    <p class="mt-2 font-normal text-sm">*Lanjut ke Nomor 4 Jika Tidak</p>
                                 </div>
                             </label>
                         </div>
@@ -245,7 +246,7 @@
                 <div class="md:text-xl mb-6">
                     <div class="w-auto">
                         <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0" for="jumlah melahirkan">
-                            Apakah saat ini Ibu atau Suami menggunakan alat/ obat/ cara KB (kontrasepsi) ?
+                            4. Apakah saat ini Ibu atau Suami menggunakan alat/ obat/ cara KB (kontrasepsi) ?
                         </label>
                     </div>
                     <div class="w-auto">
@@ -253,9 +254,11 @@
                             <label class="items-center">           
                                 {!! Form::select('II_4', [''=>'','Ya' => 'Ya', 'Tidak' => 'Tidak'], $data->II_4, array('class' => 'form-input')) !!}
                                 <div class="">
-                                    <p>Kapan anda mulai menggunakan alat/ obat KB tersebut? ?</p>
+                                    <p>* Jika iya, kapan anda mulai menggunakan alat/ obat KB tersebut? ?</p>
                                 
-                                    <input type="text" class="form-input" name="II.4.a" value="{{ $data->II_4_a }}">
+                                    <input type="month" class="form-input" name="II.4.a" value="{{ $data->II_4_a }}">
+                                    <p class="mt-2 font-normal text-sm">*Lanjut ke Nomor 7 Jika Ya</p>
+                                    <p class="mt-2 font-normal text-sm">*Lanjut ke Nomor 6 Jika Tidak</p>
                                 </div>
                             </label>
                         </div>
@@ -274,7 +277,7 @@
                 <div class="md:text-xl mb-6">
                     <div class="w-auto">
                         <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0" for="jumlah melahirkan">
-                            Apakah dalam 12 bulan (angka) (angka) terakhir Ibu atau Suami “PERNAH” menggunakan alat/obat/cara KB (Kontrasepsi)?
+                            5. Apakah dalam 12 bulan (angka) (angka) terakhir Ibu atau Suami “PERNAH” menggunakan alat/obat/cara KB (Kontrasepsi)?
                         </label>
                     </div>
                     <div class="w-auto">
@@ -285,10 +288,10 @@
                            
                                 <div class="">
                                     <p>Kapan anda mulai menggunakan alat/obat KB terakhir?</p>
-                                    <input type="text" class="form-input" name="II.5.a" value="{{ $data->II_5_a }}">
+                                    <input type="month" class="form-input" name="II.5.a" value="{{ $data->II_5_a }}">
 
                                     <p>Kapan anda berhenti menggunakan alat/obat KB terakhir?</p>
-                                    <input type="text" class="form-input" name="II.5.b" value="{{ $data->II_5_b }}">
+                                    <input type="month" class="form-input" name="II.5.b" value="{{ $data->II_5_b }}">
                                 </div>
                             </label>
                             <label class="items-center ">
@@ -309,7 +312,7 @@
                 <div class="md:text-xl mb-6">
                     <div class="w-auto">
                         <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0" for="jumlah melahirkan">
-                            Alasan utama tidak pakai KB atau putus pakai KB
+                            6. Alasan utama tidak pakai KB atau putus pakai KB
                         </label>
                     </div>
                     <div class="w-auto">
@@ -336,7 +339,7 @@
                 <div class="md:text-xl mb-6">
                     <div class="w-auto">
                         <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0" for="jumlah melahirkan">
-                            Jenis alat/obat/cara KB (Kontrasepsi) yang dipakai saat ini atau terakhir dipakai
+                            7. Jenis alat/obat/cara KB (Kontrasepsi) yang dipakai saat ini atau terakhir dipakai
                         </label>
                     </div>
                     <div class="w-auto">
@@ -345,6 +348,7 @@
                                 <label class="items-center">
                                   
                                     {!! Form::select('II_7', [''=>'','MOW / Steril Wanita' => 'MOW / Steril Wanita', 'MOP / Steril Pria' => 'MOP / Steril Pria', 'IUD / Spiral / AKDR' => 'IUD / Spiral / AKDR', 'Implant / Susuk' => 'Implant / Susuk', 'Suntik' => 'Suntik', 'Pil' => 'Pil', 'Kondom' => 'Kondom', 'MAL' => 'MAL', 'Tradisional' => 'Tradisional'], $data->II_7, array('class' => 'form-input')) !!}
+                                    <p class="mt-2 font-normal text-sm">*Khusus jawaban " Tradisional " tidak perlu menjawab pertanyaan setelahnya</p>
                                 </label>
                             </div>
                            
@@ -363,7 +367,7 @@
                 <div class="md:text-xl mb-6">
                     <div class="w-auto">
                         <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0" for="jumlah melahirkan">
-                            Sumber mendapatkan pelayanan alat/obat/cara KB terakhir ?
+                            8. Sumber mendapatkan pelayanan alat/obat/cara KB terakhir ?
                         </label>
                     </div>
                     <div class="w-auto">
@@ -388,7 +392,7 @@
                             <div>
                                 <label class="items-center">
                                     <div class="">
-                                        <input type="text" class="form-input edit_II_8b II8b" name="II_8" placeholder="sumber KB" value="{{ $data->II_8b }}">
+                                        <input type="text" class="form-input edit_II_8b II8b" name="II_8" placeholder="*lainnya" value="{{ $data->II_8b }}">
                                     </div>
                                 </label>
                             </div>
@@ -407,7 +411,7 @@
                 <div class="md:text-xl mb-6">
                     <div class="w-auto">
                         <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4" for="my-radio">
-                            Pada saat pertama kali datang ke tempat pelayanan KB untuk mendapatkan alat/ obat/ cara kontrasepsi terakhir, apakah Ibu atau Suami mendapatkan informasi tentang :
+                            9. Pada saat pertama kali datang ke tempat pelayanan KB untuk mendapatkan alat/ obat/ cara kontrasepsi terakhir, apakah Ibu atau Suami mendapatkan informasi tentang :
                         </label>
                     </div>
                     <div class="w-auto">
